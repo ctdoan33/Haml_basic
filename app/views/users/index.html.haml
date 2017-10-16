@@ -1,4 +1,30 @@
+%h3 List of Users
+%ul
+	- @users.each do |name, age|
+		%li= name
 
+%p
+	%span(style="color: red") Pie bear claw wafer
+	applicake cupcake cotton candy donut. Tootsie roll cake chupa chups pie late cake.
+	%b Caramels candy canes
+	unerdwar.com marshmallow. Apple pie marzipan marzipan cake wafer pastry. Ice cream candy canes cotton candy.
+	%a(href="") Gummies
+	chesscake muffin. cake marzipan sweet roll. Gummes sesame snaps brownie muffin lollipop macaroon cookie pie jelly-o.
 
+%p
+	%a(href="")= @users.keys[0]
+	is #{@users.values[0]} years old. #{@users.keys[1]} is #{@users.values[1]} years old and
+	%b= @users.keys[2]
+	is #{@users.values[2]} years old.
 
+%p
+	#{@users.keys[3]} is
+	%a(href="") #{@users.values[3]} years old.
+	#{@users.keys[4]} is #{@users.values[4]} years old and #{@users.keys[5]} is #{@users.values[5]} years old.
 
+%h3 Below are #{@users.keys[0]}'s Friends:
+%ol
+	- @users.each do |name, age|
+		%li=name
+		%ul
+			%li= age
